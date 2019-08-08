@@ -4,8 +4,7 @@ import actions from './actions';
 
 const mapStateToProps = state => {
   return {
-    todos: state.todos,
-    filters: state.filters
+    auth: state.authentication
   };
 };
 

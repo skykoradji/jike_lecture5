@@ -1,8 +1,7 @@
 
-import filtersAction from './filtersAction';
-import todosAction from './todosAction';
+import authAction from './authAction';
+
 
 export default {
-  ...filtersAction,
-  ...todosAction
+  ...authAction
 };

@@ -11,13 +11,11 @@ Actions looks like this ->
 // add todo and update state;
 const addTodo = (text) => {
   return function(dispatch) {
-    setTimeout(() => {
-      dispatch({
-        type: ADD_TODO,
-        id: Math.random(), 
-        text
-      });
-    }, 2000);
+    dispatch({
+      type: ADD_TODO,
+      id: Math.random(), 
+      text
+    });
   }
 };
 

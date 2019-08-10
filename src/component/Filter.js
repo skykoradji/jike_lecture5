@@ -3,16 +3,20 @@ import connectRedux from '../redux/connect';
 
 
 const Filter = ({ updateFilter, filters}) => {
+
+  const updateFilterNow = (event) => {
+    updateFilter(event.target.getAttribute("data-filter"));
+  }
   return (
     <div>
       <span>Show: </span>
-      <button onClick={(e) => updateFilter('ALL')} disabled={filters.filter === 'ALL'} style={{ marginLeft: '4px', }}>
+      <button onClick={updateFilterNow} data-filter="ALL" disabled={filters.filter === 'ALL'} style={{ marginLeft: '4px', }}>
         All
       </button>
-      <button onClick={(e) => updateFilter('ACTIVE')} disabled={filters.filter === 'ACTIVE'} style={{ marginLeft: '4px', }}>
+      <button onClick={updateFilterNow} data-filter="ACTIVE" disabled={filters.filter === 'ACTIVE'} style={{ marginLeft: '4px', }}>
         Active
       </button>
-      <button onClick={(e) => updateFilter('COMPLETED')} disabled={filters.filter === 'COMPLETED'} style={{ marginLeft: '4px', }}>
+      <button onClick={updateFilterNow} data-filter="COMPLETED" disabled={filters.filter === 'COMPLETED'} style={{ marginLeft: '4px', }}>
         Completed
       </button>
     </div>

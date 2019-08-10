@@ -4,8 +4,8 @@ import actions from './actions';
 
 const mapStateToProps = state => {
   return {
-    todos: state.todos,
-    filters: state.filters
+    todos: state.todosReducer,
+    filters: state.filtersReducer
   };
 };
 

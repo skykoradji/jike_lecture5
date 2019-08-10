@@ -20,7 +20,7 @@ const configureStore = (initialState = {}) => {
   // Internally React Redux works by calling store.subscribe() when the component mounts. 
   // Every time the Redux store changes, the subscription callback fires.
   // Inside it, React Redux calls React setState() by taking Redux store state and passing it through mapStateToProps()
-  store.subscribe(() => console.log(store.getState()));
+  //store.subscribe(() => console.log(store.getState()));
   const persistor = persistStore(store);
 
   return { store, persistor };

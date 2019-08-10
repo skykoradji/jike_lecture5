@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Filter from './component/Filter';
 import AddTodo from './component/AddTodo';
 import VisibleTodoList from './component/TodoList';
+import Test from './component/Test';
 import configureStore from './redux';
 const { store, persistor } = configureStore();
 
@@ -15,6 +16,7 @@ const App = () => (
       <AddTodo />
       <VisibleTodoList />
       <Filter />
+      <Test />
     </PersistGate>
   </Provider>
 )
